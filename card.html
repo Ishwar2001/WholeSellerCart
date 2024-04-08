@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Grid with Bag Types</title>
+  <style>
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: green;
+  width: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+  
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.sidebar ul li:hover {
+  background-color: #666;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  padding: 20px;
+  
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card-image {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+  position: relative;
+   overflow: hidden;
+ 
+   
+}
+
+/* Card grid styles */
+.card-grid {
+  margin-left: 220px; /* Adjust according to sidebar width */
+  margin-right: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Add space between the cards */
+  padding:20px;
+
+}
+
+.card {
+  width: calc(30% - 10px); /* Adjust the width for 4 cards in each row and subtract margin */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-content {
+  padding: 20px;
+}
+
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.offer-tag {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+
+
+
+.overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;   
+}
+
+.overlay img {
+  width: 60px; /* Adjust size of brand logo */
+  height: auto; 
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.brand-logo {
+  width: 30px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+.card {
+  position: relative;
+}
+
+.card .overlay {
+  position: absolute;
+  top: 10px; /* Adjust the distance from the top */
+  left: 10px; /* Adjust the distance from the left */
+  width: 80px; /* Adjust the size of the logo */
+  border-radius: 2%; /* Apply rounded corners */
+  overflow: hidden; /* Ensure rounded corners are applied */
+}
+
+.card  img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Medium screens */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: calc(33.33% - 10px); /* Adjust the width for 3 cards in each row and subtract margin */
+  }
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 10px); /* Adjust the width for 2 cards in each row and subtract margin */
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width for single card in each row */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <ul>
+    <li class="bag-type">Tote Bags</li>
+    <li class="bag-type">Sling Bags</li>
+    <li class="bag-type">Card Holder</li>
+    <li class="bag-type">Shoulder Bags</li>
+    <li class="bag-type">Wallet</li>
+    <li class="bag-type">Satchel</li>
+    <li class="bag-type">Hnad Bags</li>
+    <li class="bag-type">Designer Bags</li>
+    <li class="bag-type">Crossbody Bags</li>
+  </ul>
+</div>
+
+<div class="card-grid">
+  <!-- Card 1 -->
+  <div class="card">
+    <img class="card-image" src="public/rectangle-43@2x.png" alt="Image 1">
+    <div class="overlay">
+        <img src="public/1-1@2x.png" alt="Brand Logo">   
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">Kevin Classic</h3>
+    <p class="card-description">
+            $3,999  
+      <span class="offer-tag"> 20% Off</span>
+             $4,999  
+    </p>   
+   </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <img class="card-image" src="public/rectangle-44@2x.png" alt="Image 2">
+    <div class="overlay">
+        <img src="public/1-1@2x.png" alt="Brand Logo">   
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">Kevin Classic</h3>
+    <p class="card-description">
+            $3,999  
+      <span class="offer-tag"> 20% Off</span>
+             $4,999  
+    </p>   
+   </div>
+  </div>
+
+  <!-- Card 3 -->
+<div class="card">
+  <div class="card-image">
+    <img src="public/rectangle-46@2x.png" alt="Image 3">
+    <div class="overlay">
+      <img src="public/1-1@2x.png" alt="Brand Logo">   
+  </div>
+  </div>
+  <div class="card-content">
+    <h3 class="card-title">Kevin Classic</h3>
+    <p class="card-description">
+      $3,999  
+      <span class="offer-tag"> 20% Off</span>
+      $4,999       
+    </p>
+
+  </div>
+  </div>
+<!-- Card 3 -->
+<div class="card">
+    <div class="card-image">
+      <img src="public/rectangle-46@2x.png" alt="Image 3">
+      
+      <div class="overlay">
+        <img class="brand-logo" src="public/1-1@2x.png" alt="Brand Logo">
+      </div>
+    </div>
+  
+  <div class="card-content">
+    <h3 class="card-title">Kevin Classic</h3>
+    <p class="card-description">
+      $3,999  
+      <span class="offer-tag"> 20% Off</span>
+      $4,999       
+    </p>
+  </div> 
+</div>
+
+  <!-- Repeat the above structure for the remaining cards 
+  
+  <div class="card">
+  <div class="card-image">
+    <img src="public/rectangle-46@2x.png" alt="Image 3">
+    <div class="overlay">
+      <img src="public//1-1@2x.png" alt="Brand Logo">
+    </div>
+  </div>
+  <div class="card-content">
+    <h3 class="card-title">Kevin Classic</h3>
+    <p class="card-description">
+      $3,999  
+      <span class="offer-tag"> 20% Off</span>
+      $4,999  
+    </p>   
+  </div>
+</div>-->
+</div>
+
+
+
+
+
+
+	
+
+</body>
+</html>
+
+
+
+

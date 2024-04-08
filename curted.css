@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card-image {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card grid styles */
+.card-grid {
+  margin-left: 40px; /* Adjust according to sidebar width */
+  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Add space between the cards */
+  padding: 20px;
+  background-color: green;
+  width:90%;
+}
+
+.card {
+  width: calc(30% - 10px); /* Adjust the width for 4 cards in each row and subtract margin */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  padding: 10px;
+  margin-bottom: 0%;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.offer-tag {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;   
+}
+
+.overlay img {
+  width: 60px; /* Adjust size of brand logo */
+  height: auto; 
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.card {
+  position: relative;
+}
+
+.card .overlay {
+  position: absolute;
+  top: 10px; /* Adjust the distance from the top */
+  left: 10px; /* Adjust the distance from the left */
+  width: 80px; /* Adjust the size of the logo */
+  border-radius: 2%; /* Apply rounded corners */
+  overflow: hidden; /* Ensure rounded corners are applied */
+}
+
+.card  img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.discounted-price {
+    text-decoration: line-through;
+    color: #999; /* Optional: Adjust color of the line */
+}
+
+.name {
+  background-color: green;
+  text-align: center;
+}
+
+/* Medium screens */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: calc(33.33% - 10px); /* Adjust the width for 3 cards in each row and subtract margin */
+  }
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 10px); /* Adjust the width for 2 cards in each row and subtract margin */
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width for single card in each row */
+  }
+}
+    
